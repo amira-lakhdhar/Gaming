@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <RelativeLayout
+                android:id="@+id/rlHeader"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:id="@+id/baaza"
+                    android:src="@drawable/girl_image"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativelogin"
+                android:layout_width="220dp"
+                android:layout_height="480dp"
+                android:background="@drawable/shape_left_panel"
+                app:layout_constraintTop_toBottomOf="@id/rlHeader"
+                tools:ignore="MissingConstraints">
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/login_panel"
+                app:layout_constraintTop_toBottomOf="@id/rlHeader"
+                android:background="@drawable/shape_login_panel"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="60dp"
+                android:paddingTop="70dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:drawableRight="@drawable/ic_email_24dp"
+                    android:hint="Email"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:layout_height="60dp"/>
+                <EditText
+                    android:drawableRight="@drawable/security_24"
+                    android:hint="Passwrod"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"/>
+
+
+            </LinearLayout>
+            <Button
+                android:text="Login"
+                android:id="@+id/loginbutton"
+                app:layout_constraintBottom_toBottomOf="@id/login_panel"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFFF"
+                android:background="@drawable/shape_login_button"/>
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="40dp"
+                android:text="Login"
+                app:layout_constraintTop_toTopOf="@id/login_panel"/>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
